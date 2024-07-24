@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  height: calc(100vh - 66rpx);
+  /* min-height: calc(100vh - 66rpx); */
+  /* overflow: hidden; */
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: constant(safe-area-inset-bottom); 
+  background: white;
+  /* 确保子元素不会超出容器 */
+}
+
+page {
+  --td-cell-title-font-size: 25rpx;
+  --td-cell-image-height: 160rpx;
+  --td-cell-image-width: 160rpx;
+  --td-cell-description-line-height: 80rpx;
+  --td-brand-color: rgba(97, 179, 255, 1);
+  --td-tab-nav-bg-color:transparent;
+}

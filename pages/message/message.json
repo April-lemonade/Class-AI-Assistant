@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "t-icon": "../../miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "tab-bar": "../../custom-tab-bar/index",
+    "t-avatar": "../../miniprogram_npm/tdesign-miniprogram/avatar/avatar",
+    "t-button": "../../miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-divider": "../../miniprogram_npm/tdesign-miniprogram/divider/divider",
+    "t-cell-group": "../../miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-input": "../../miniprogram_npm/tdesign-miniprogram/input/input",
+    "t-navbar": "../../miniprogram_npm/tdesign-miniprogram/navbar/navbar",
+    "t-tabs": "../../miniprogram_npm/tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "../../miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel"
+  },
+  "navigationStyle": "custom"
+}

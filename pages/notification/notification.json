@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "t-grid": "../../miniprogram_npm/tdesign-miniprogram/grid/grid",
+    "t-grid-item": "../../miniprogram_npm/tdesign-miniprogram/grid-item/grid-item",
+    "t-cell-group": "../../miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-badge": "../../miniprogram_npm/tdesign-miniprogram/badge/badge",
+    "t-icon": "../../miniprogram_npm/tdesign-miniprogram/icon/icon"
+  },
+  "navigationBarTitleText": "公告"
+}

@@ -1,0 +1,131 @@
+/** index.wxss **/
+.container {
+  position: relative;
+  height: calc(100vh - 66rpx);
+  min-height: calc(100vh - 66rpx);
+  overflow: hidden;
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  width: 312rpx;
+  height: 312rpx;
+  background-color: rgba(255, 243, 138, 1);
+  top: 0;
+  left: 488rpx;
+}
+
+.block2 {
+  width: 1070rpx;
+  height: 1070rpx;
+  background-color: rgba(97, 179, 255, 1);
+  top: -217rpx;
+  left: -527rpx;
+}
+
+.block3 {
+  width: 253rpx;
+  height: 253rpx;
+  background-color: rgba(255, 243, 138, 1);
+  top: 1101rpx;
+  left: -89rpx;
+}
+
+.block4 {
+  width: 514rpx;
+  height: 514rpx;
+  background-color: rgba(29, 245, 198, 1);
+  top: 693rpx;
+  left: 286rpx;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  /* 确保内容在背景之上 */
+}
+
+.hello {
+  position: absolute;
+  left: 70rpx;
+  top: 485rpx;
+  width: 610rpx;
+  height: 130rpx;
+  opacity: 1;
+  border-radius: 42rpx;
+  background: rgba(0, 0, 0, 0.08);
+  border: 2rpx solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0rpx 6rpx 16rpx rgba(0, 0, 0, 0.06);
+  /* backdrop-filter: blur(100rpx); */
+  color: white;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  /* text-align: center; */
+  box-sizing: border-box;
+  /* padding: 0 20rpx; */
+}
+
+.bigBtn {
+  position: absolute;
+  left: 26rpx;
+  width: 699rpx;
+  height: 270rpx;
+  border-radius: 30px;
+  background: rgba(237, 246, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.47);
+  box-shadow: 0px 4px 60px rgba(0, 48, 102, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.btnContent {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnText {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.btnTitle {
+  font-size: 60rpx;
+  font-weight: 600;
+  line-height: 79.56rpx;
+  text-align: left;
+  vertical-align: top;
+}
+
+.btnDesc {
+  width: 332rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  line-height: 35rpx;
+  color: rgba(0, 36, 56, 0.4);
+  text-align: justify;
+  vertical-align: middle;
+}

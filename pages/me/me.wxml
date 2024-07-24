@@ -1,0 +1,45 @@
+<scroll-view class="container" scroll-y>
+  <view style="padding-bottom: 15%;">
+    <view class="top">
+      <view class="bg">
+        <view class="background-block block1"></view>
+        <view class="background-block block2"></view>
+      </view>
+      <view class="content">
+        <t-avatar bordered style="--td-avatar-border-width-large:2rpx" image="https://img.js.design/assets/img/669e072e1fc558ec9921f8b7.png#d4aaf232073833d58c56dc06afcfec6d" size="large" />
+        <view style="display: flex;flex-direction: row;width: 100vw;align-items: center;justify-content: center;">
+          <view style="font-size: 36rpx;color: rgba(255, 255, 255, 0.8);">王老师</view>
+          <t-icon style="display: flex;align-items: center;justify-content: center;" name="edit" color="rgba(255, 255, 255, 0.8)"></t-icon>
+        </view>
+        <view style="font-size: 28rpx;color: rgba(255, 255, 255, 1);">金凤小学 三年级二班 语文老师</view>
+        <view style="display: flex;flex-direction: row;width: 80%;justify-content: space-between;margin-top: 2%;">
+          <view wx:for="{{btns}}" wx:key="index" style="display: flex;flex-direction: row;font-size: 24rpx;color: rgba(0, 0, 0, 0.4);gap: 10rpx;">
+            <t-icon name="{{item.icon}}" size="30rpx" color="rgba(0, 0, 0, 0.4);border-radius: 8rpx;background: rgba(255, 255, 255, 0.6);color:var(--td-brand-color);display:flex;align-items:center;justify-content:center" />
+            <view style="color: rgba(255, 255, 255, 1);">{{item.label}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <t-cell-group style="box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);border-radius: 40rpx;" theme="card">
+      <t-cell image="https://img.js.design/assets/img/669f96eb9c982e9e2f01f962.png#6641de698cde6bf1301d4402c8132381" hover bordered="{{false}}" arrow>
+        <view style="font-size: 24rpx;color: rgba(0, 0, 0, 0.4);" slot="title">我的AI助教</view>
+        <view slot="description">
+          <view style="color: black;margin: 0;">小诗</view>
+          <view style="display: flex;flex-direction: row;width: 100%;justify-content: space-between;">
+            <t-button style="margin:0;height:40rpx;line-height: 40rpx;font-weight: normal;font-size: 24rpx;padding: 0 40rpx;background: linear-gradient(180deg, rgba(74, 247, 209, 1) 0%, rgba(97, 179, 255, 1) 100%);color: white;border-radius: 15rpx;width: 110rpx;height: 40rpx;" size="extra-small" wx:for="{{AIOps}}" wx:key="index">{{item}}</t-button>
+          </view>
+        </view>
+      </t-cell>
+    </t-cell-group>
+    <t-grid column="{{4}}" theme="card" style="margin-top: 5%;box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);border-radius: 40rpx;">
+      <t-grid-item wx:for="{{tabs}}" wx:key="index" text="{{item.label}}" image="slot">
+        <image style="width: {{item.width}}rpx;height: {{item.height}}rpx;align-items: center;justify-content: center;" slot="image" src="{{item.icon}}" />
+      </t-grid-item>
+    </t-grid>
+    <t-cell-group style="margin-top: 5%;box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);border-radius:40rpx;" theme="card">
+      <t-cell wx:for="{{ops}}" wx:key="index" t-cell arrow title="{{item.lable}}" bordered="{{false}}">
+        <image style="width: 40rpx;height: 40rpx;" slot="image" src="{{item.icon}}" />
+      </t-cell>
+    </t-cell-group>
+  </view>
+</scroll-view>

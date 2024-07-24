@@ -1,0 +1,60 @@
+<!--pages/templet/templet.wxml-->
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs class="nav" defaultValue="{{2}}" theme="tag" style="--td-tab-nav-bg-color:transparent;--td-tab-item-tag-bg:transparent;--td-tab-item-tag-active-bg:transparent;--td-tab-item-active-color:black;" split="{{false}}" swipeable="{{false}}" space-evenly="{{false}}">
+      <t-tab-panel wx:for="{{btns}}" wx:key="index" label="{{item}}" value="{{index}}" />
+    </t-tabs>
+    <t-cell-group theme="card" style="margin-top:2%;margin-bottom: 100rpx;box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);border-radius: 45rpx;">
+      <t-cell align="top">
+        <view slot="title" style="font-size:30rpx">通知模板</view>
+        <view slot="note" style="display: flex;flex-direction: row;font-size: 20rpx;align-items: center;">
+          <t-icon name="edit" size="18" />编辑
+        </view>
+        <view slot="description" style="display:flex;flex-direction:column">
+          <view style="font-size: 24rpx;color: rgba(0, 0, 0, 0.4);">轻松选择各类模板进行文案编辑</view>
+          <!-- <t-row gutter="20">
+            <t-col wx:for="{{ops}}" wx:key="index" span="8">
+              <t-check-tag style="width: 100%;text-align: center;align-items: center;justify-content: center;" default-checked="{{index%3==0 || index==2?true:false}}" content="{{item}}" />
+            </t-col>
+          </t-row> -->
+          <view class="ops">
+            <t-tabs defaultValue="{{2}}" theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+              <t-tab-panel wx:for="{{ops}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+            </t-tabs>
+            <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+              <t-tab-panel wx:for="{{ops1}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+            </t-tabs>
+            <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+              <t-tab-panel wx:for="{{ops2}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+            </t-tabs>
+          </view>
+          <t-divider />
+          <view style="font-size: 24rpx;width: 100%;line-height: 42rpx;height: max-content;gap: 20rpx;display: flex;flex-direction: column;">
+            <view>尊敬的家长:</view>
+            <view>关注安全，关注孩子的健康成长，是我们共同的心愿。履行监护责任，按时接送孩子是家长的责任。现就家长按时接送孩子问题提出如下要求：</view>
+            <view>
+              一、每天上午7：50将孩子送到学校大门口，11:15在接送点接孩子；下午2：20将孩子送到学校大门口，4：00在大门以外接孩子。
+            </view>
+            <view>二、凡因事不能接送孩子上下学时，应提前30分钟电话告知，并明确告知委托接送孩子上下学代理人的姓名和电话，便于我与代理人联系；若我没有接到电话，则视为家长亲自来校接送孩子。微信或短信一概视为无效，因为我不可能时时刻刻看手机。</view>
+            <view>三、孩子有事有病不来上学，必须向老师请假。家长有事来接孩子出校门，必须带孩子到老师面前请假后拿着假条方可离校。</view>
+            <view>四、教育孩子放学不要跟陌生人走，不要在家长不知情的情况下到同学、朋友家玩。（其他家长接走不是自家的孩子，有必要告知老师，更有义务第一时间通知其家长）</view>
+            <view>五、由于学校门口比较狭窄，接送学生时车辆比较多，不允许开到校门口，请各位家长提前安排好停车。</view>
+            <view>以上各条希望家长认真做到，确保孩子上下学的安全。感谢您的配合！</view>
+            <view style="font-size: 20rpx;color: rgba(18, 18, 18, 0.3);">380/1000</view>
+          </view>
+        </view>
+      </t-cell>
+    </t-cell-group>
+  </view>
+  <view style="width: 100%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: white;">
+    <t-input style="--td-font-size-m:18rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:18rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
+      <t-icon slot="suffix" name="https://img.js.design/assets/img/669ff370f628c5f9757c4381.png#2da0d56410dd410dedc9840de5a0548d" style="margin-right: 10%;" size="42rpx"></t-icon>
+    </t-input>
+  </view>
+</scroll-view>

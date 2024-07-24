@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/dialog/dialog",
+    "pages/logs/logs",
+    "pages/message/message",
+    "pages/notification/notification",
+    "pages/me/me",
+    "pages/gallery/gallery",
+    "pages/templet/templet",
+    "pages/person/person"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "t-tab-bar": "./miniprogram_npm/tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "./miniprogram_npm/tdesign-miniprogram/tab-bar-item/tab-bar-item"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "班级"
+      },
+      {
+        "pagePath": "pages/dialog/dialog",
+        "text": "对话"
+      },
+      {
+        "pagePath": "pages/notification/notification",
+        "text": "公告"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

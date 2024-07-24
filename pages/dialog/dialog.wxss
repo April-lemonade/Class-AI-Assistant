@@ -1,0 +1,71 @@
+/* pages/dialog/dialog.wxss */
+.container {
+  position: relative;
+  height: calc(100vh - 66rpx);
+  min-height: calc(100vh - 66rpx);
+  overflow: hidden;
+  background-color: rgba(97, 179, 255, 0.1);
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  width: 514rpx;
+  height: 514rpx;
+  background-color: rgba(29, 245, 198, 1);
+  top: -205rpx;
+  left: 378rpx;
+}
+
+.block2 {
+  width: 817rpx;
+  height:817rpx;
+  background-color: rgba(97, 179, 255, 1);
+  top: -228rpx;
+  left: -280rpx;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 5%;
+  /* 确保内容在背景之上 */
+}
+
+.t-cell__title{
+  width: 75%;
+}
+
+.classOperBtn {
+  --td-button-font-weight: normal;
+  --td-button-extra-small-height: 30rpx;
+  --td-button-extra-small-font-size: 16rpx;
+  margin: 0;
+}
+
+.dateweather {
+  font-size: var(--td-divider-content-font-size, 24rpx);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.row{
+  margin-right:0px;
+  margin-left: 0px;
+}

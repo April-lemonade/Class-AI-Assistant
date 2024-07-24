@@ -1,0 +1,193 @@
+/* pages/message/message.wxss */
+
+.funcBtn {
+  --td-button-font-weight: normal;
+  --td-button-extra-small-height: 44rpx;
+  --td-button-extra-small-font-size: 20rpx;
+  border-radius: 6px;
+  /* background: rgba(254, 255, 254, 1); */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
+  margin: 0 1%;
+  padding: 2% 8%;
+  border: none;
+}
+
+.diabor {
+  align-self: flex-end;
+  margin-right: 2%;
+  width: 570rpx;
+  border-radius: 40rpx 40rpx 0rpx 40rpx;
+  /* padding: 3%; */
+  font-size: 26rpx;
+  background: rgba(97, 179, 255, 0.4);
+  font-weight: 400;
+}
+
+.diabor1 {
+  align-self: flex-start;
+  margin-left: 2%;
+  width: 570rpx;
+  border-radius: 40rpx 40rpx 40rpx 0rpx;
+  /* padding: 3%; */
+  font-size: 24rpx;
+  line-height: 30rpx;
+  position: relative;
+  /* margin-left: 2%; */
+  background: rgba(254, 255, 254, 1);
+}
+
+/* .t-cell {
+  height: 20rpx;
+} */
+
+.t-cell__title-text {
+  font-size: 18rpx;
+}
+
+.t-cell__title-text .t-class-title {
+  font-size: 18rpx;
+}
+
+.t-input__wrap {
+  --td-input-bg-color: rgba(245, 248, 252, 1);
+  --td-input-border-radius: 55rpx;
+}
+
+.background-block {
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  position: absolute;
+  left: -58rpx;
+  top: -182.03rpx;
+  width: 710rpx;
+  height: 885.03rpx;
+  background: rgba(29, 245, 198, 0.2);
+  border: 1px solid rgba(0, 0, 0, 1);
+  /* filter: blur(350rpx); */
+}
+
+.block2 {
+  position: absolute;
+  left: -100rpx;
+  top: 737rpx;
+  width: 1225rpx;
+  height: 1107rpx;
+  background: rgba(97, 179, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 1);
+  /* filter: blur(350rpx); */
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* overflow-x: hidden; */
+  height: 125%;
+  z-index: 1;
+  background-color: white;
+  /* overflow: hidden; */
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 5%;
+  /* margin-bottom: 50%; */
+  /* height: calc(100vh - env(safe-area-inset-bottom)); */
+  /* padding-bottom: env(safe-area-inset-bottom)+500rpx; */
+  /* padding-bottom: constant(safe-area-inset-bottom); */
+  /* 确保内容在背景之上 */
+}
+
+.t-tabs__item-inner--tag {
+  border-radius: 15rpx
+}
+
+.diaText {
+  padding: 5%;
+  line-height: 40rpx;
+}
+
+
+.t-tabs__item {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: var(--td-brand-color) !important;
+  padding: 0 20rpx !important;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  height: var(--td-tab-item-height, 55rpx);
+  /* background: white; */
+}
+
+.t-tabs__item-inner--tag {
+  width: 165rpx !important;
+  height: 60rpx !important;
+  text-align: center;
+  padding: 0 !important;
+  line-height: var(--td-tab-item-tag-height, 60rpx);
+  border-radius: 15rpx;
+  background-color: white !important;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+.t-tabs__item--active {
+  font-weight: normal !important;
+  /* background: var(--td-brand-color) !important; */
+  color: white !important;
+}
+
+.t-tabs__item-inner--active {
+  width: 100%;
+  text-align: center;
+  padding: 0 !important;
+  line-height: var(--td-tab-item-tag-height, 60rpx);
+  border-radius: 15rpx;
+  background-color: var(--td-brand-color) !important;
+}
+
+.time {
+  border: none !important;
+  /* padding: 2%; */
+  width: 100%;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.upload {
+  width: 150rpx;
+  align-self: flex-end;
+  margin-right: 2%;
+}
+
+.t-input__control {
+  width: 483rpx !important;
+  height: 56rpx !important;
+  display: block;
+  box-sizing: border-box;
+  width: 60vw;
+  min-width: 0;
+  min-height: 48rpx;
+  margin: 0;
+  padding: 0 5% !important;
+  color: var(--td-input-default-text-color, var(--td-text-color-primary, var(--td-font-gray-1, rgba(0, 0, 0, 0.9))));
+  line-height: inherit;
+  border-radius: 55px !important;
+  background: rgba(245, 248, 252, 1) !important;
+  border: 0;
+  resize: none;
+  font-size: 18rpx !important;
+}

@@ -1,0 +1,86 @@
+/* pages/person/person.wxss */
+.container {
+  position: relative;
+  height: 100vh;
+  /* min-height: calc(100vh - 66rpx); */
+  /* overflow: hidden; */
+
+  background: white;
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  width: 100vw;
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  left: 499rpx;
+  top: 11rpx;
+  width: 312rpx;
+  height: 312rpx;
+  opacity: 1;
+  background: rgba(255, 243, 138, 1);
+  /* filter: blur(120px); */
+
+}
+
+.block2 {
+  left: -516rpx;
+  top: -46rpx;
+  width: 1070rpx;
+  height: 1070rpx;
+  opacity: 1;
+  background: rgba(97, 179, 255, 0.8);
+  /* filter: blur(120px); */
+
+}
+
+.block3 {
+  left: -78rpx;
+  top: 1272rpx;
+  width: 253rpx;
+  height: 253rpx;
+  /* opacity: 1; */
+  background: rgba(255, 243, 138, 0.8);
+  /* filter: blur(120px); */
+
+}
+
+.block4 {
+  left: 297rpx;
+  top: 864rpx;
+  width: 514rpx;
+  height: 514rpx;
+  /* opacity: 1; */
+  background: rgba(29, 245, 198, 0.8);
+  /* filter: blur(120px); */
+
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 0;
+  /* 确保内容在背景之上 */
+}

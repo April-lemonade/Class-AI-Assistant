@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "t-avatar": "../../miniprogram_npm/tdesign-miniprogram/avatar/avatar",
+    "t-icon": "../../miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "t-cell-group": "../../miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-button": "../../miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-grid": "../../miniprogram_npm/tdesign-miniprogram/grid/grid",
+    "t-grid-item": "../../miniprogram_npm/tdesign-miniprogram/grid-item/grid-item"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom"
+}

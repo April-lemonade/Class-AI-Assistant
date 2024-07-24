@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "t-icon": "../../miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "tab-bar": "../../custom-tab-bar/index",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-avatar": "../../miniprogram_npm/tdesign-miniprogram/avatar/avatar",
+    "t-badge": "../../miniprogram_npm/tdesign-miniprogram/badge/badge",
+    "t-navbar": "../../miniprogram_npm/tdesign-miniprogram/navbar/navbar"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom"
+}

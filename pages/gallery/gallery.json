@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "t-grid": "../../miniprogram_npm/tdesign-miniprogram/grid/grid",
+    "t-grid-item": "../../miniprogram_npm/tdesign-miniprogram/grid-item/grid-item",
+    "t-button": "../../miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-tabs": "../../miniprogram_npm/tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "../../miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel"
+  },
+  "navigationBarTitleText": "班级相册"
+}

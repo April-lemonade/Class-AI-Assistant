@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "tab-bar": "../../custom-tab-bar/index",
+    "t-avatar": "../../miniprogram_npm/tdesign-miniprogram/avatar/avatar",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-divider": "../../miniprogram_npm/tdesign-miniprogram/divider/divider",
+    "t-cell-group": "../../miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-button": "../../miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-grid": "../../miniprogram_npm/tdesign-miniprogram/grid/grid",
+    "t-grid-item": "../../miniprogram_npm/tdesign-miniprogram/grid-item/grid-item",
+
+    "t-image": "../../miniprogram_npm/tdesign-miniprogram/image/image",
+    "t-navbar": "../../miniprogram_npm/tdesign-miniprogram/navbar/navbar"
+  },
+  "navigationBarTitleText": "对话",
+  "navigationStyle": "custom"
+}

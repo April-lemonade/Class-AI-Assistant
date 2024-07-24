@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "t-avatar": "../../miniprogram_npm/tdesign-miniprogram/avatar/avatar",
+    "t-grid": "../../miniprogram_npm/tdesign-miniprogram/grid/grid",
+    "t-grid-item": "../../miniprogram_npm/tdesign-miniprogram/grid-item/grid-item",
+    "t-fab": "../../miniprogram_npm/tdesign-miniprogram/fab/fab"
+  },
+  "navigationBarTitleText": ""
+}

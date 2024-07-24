@@ -1,0 +1,20 @@
+<!--pages/person/person.wxml-->
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-avatar size="150rpx" image="{{img}}" />
+    <view style="margin-top: 3%;font-size: 36rpx;color: rgba(0, 0, 0, 0.8);">{{name}}</view>
+    <view style="font-size:24rpx;margin-top: 2%;color: rgba(0, 0, 0, 0.4);">金凤小学 三年级二班 </view>
+    <t-grid style="box-shadow: 0rpx 6rpx 16rpx  rgba(0, 0, 0, 0.06);margin-top: 3%;border-radius: 58.66rpx;" column="{{3}}" theme="card">
+      <t-grid-item style="--td-grid-item-image-width:200rpx" wx:for="{{20}}" wx:key="index" image="slot">
+        <image slot="image" src="{{img}}" style="width: 190rpx;height: 190rpx;border-radius: 40rpx;" mode="aspectFill" />
+      </t-grid-item>
+    </t-grid>
+    <t-fab icon="add" button-props="{{fabButton}}" bind:click="" text="" />
+  </view>
+</scroll-view>

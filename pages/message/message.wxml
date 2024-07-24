@@ -1,0 +1,88 @@
+<!-- <view style="width: 100%;background-color: white;">
+    <view class="nav" style="display: flex;flex-direction: row;height:{{statusBarHeight}};width: 100%;padding-top: {{statusBarHeight}}px;margin-bottom: 5%;margin-left: 5%;align-items: center;width: 45%;justify-content: space-around;">
+      <t-icon name="chevron-left" size="50rpx" />
+      <t-avatar class="avatar-example" image="https://tdesign.gtimg.com/mobile/demos/avatar1.png" size="small" />
+      <view>AI助教小诗</view>
+    </view>
+  </view> -->
+
+<scroll-view class="container" style="height: 100vh;" scroll-y>
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" left-arrow>
+    <view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;width: 30vw;padding-bottom: 3%;--td-avatar-small-width:60rpx" slot="left">
+      <!-- <t-icon name="chevron-left" size="40rpx" /> -->
+      <t-avatar class="avatar-example" image="https://img.js.design/assets/img/669e04ddf7b4dc16d85eafaf.png#ced05ab96d19839c0eab01f7cefae682" size="small" />
+      <view>AI助教小诗</view>
+    </view>
+  </t-navbar>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+  </view>
+  <view class="content" scroll-y>
+    <view class="intro" style="align-items: center;display: flex;flex-direction: column;gap:20rpx">
+      <t-avatar class="avatar-example" image="https://img.js.design/assets/img/669e04ddf7b4dc16d85eafaf.png#ced05ab96d19839c0eab01f7cefae682" size="large" />
+      <view style="border-radius: 13px 13px, 13px, 13px;background: rgba(254, 255, 254, 1);box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);width: 80%;padding: 5%;font-size: 24rpx;border-radius: 40rpx;background: rgba(255, 255, 255, 1);line-height: 35rpx;">
+        王老师，您好！我是您的AI助教小诗，我可以帮您回复家长消息、上传班级资料文件、转发通知到班级群内、帮您搜索班级资料等等，也可以回答您的各种问题，给您的家校沟通工作提供帮助。请问有什么需要我帮助呢?
+      </view>
+      <!-- <scroll-view scroll-x style="width: 100vw;white-space: nowrap;">
+        <t-button theme="primary" variant="{{index==0?'':'outline'}}" wx:for="{{btns}}" wx:key="index" size="extra-small" class=" funcBtn" style="margin: 0 1%;padding: 2% 5%;" data-value="{{index}}" bind:tap="godetail">{{item}}</t-button>
+      </scroll-view> -->
+      <view>
+        <t-tabs defaultValue="{{0}}" theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;">
+          <t-tab-panel wx:for="{{btns}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" />
+        </t-tabs>
+        <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;">
+          <t-tab-panel wx:for="{{btns1}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" />
+        </t-tabs>
+      </view>
+
+      <!-- <t-tabs defaultValue="{{2}}" theme="tag" space-evenly="{{false}}">
+        <t-tab-panel wx:for="{{btns}}" wx:key="index" label="{{item}}" value="{{index}}" />
+      </t-tabs> -->
+    </view>
+    <view style="width: 100%;display: flex;flex-direction: column;gap:15rpx;">
+      <t-divider content="6月15日 10:30" class="time" />
+      <view class="diabor">
+        <view class="diaText">
+          <view>你好小诗，请将今天的语文作业上传到作业管理中，并将作业消息转发到班级群里。</view>
+          <view>（1）背诵第一课古诗三首中的《绝句》和《惠崇春江晚景》两首诗；请家长回家后检查孩子的课堂笔记；</view>
+          <view>（2）预习第一课古诗三首中的《三衢道中》，做好生词查阅。</view>
+        </view>
+
+      </view>
+      <view class="diabor1">
+        <view class="diaText">已帮您将今日语文作业上传至作业管理系统，并成功转发至班级群，您可前往工作台中查看详情。</view>
+      </view>
+      <t-divider content="6月15日 16:30" class="time" />
+      <view class="diabor">
+        <view class="diaText">你好小诗，请将这些照片上传到班级相册。</view>
+      </view>
+      <view class="diabor" style="background: white;border-radius: 20rpx;padding:0;--td-cell-padding:0">
+        <t-cell-group theme="card" style="margin:0">
+          <t-cell style="border-radius: 6px;">
+            <view slot="title" style="font-size: 24rpx;font-weight: 400;">大合照</view>
+            <image slot="image" style="width: 73.25rpx;height: 60rpx;" src="https://img.js.design/assets/img/669fdad96e8e19d665cce995.png#d03b8d5e3bb5045b9af1d0fd318f63b2" />
+            <view slot="description" style="line-height:29rpx;font-size: 22rpx;">99.6MB</view>
+          </t-cell>
+        </t-cell-group>
+      </view>
+      <view class="diabor1">
+        <view class="diaText">已帮您将照片上传至班级相册中，您可前往班级群查看。</view>
+      </view>
+      <!-- <t-cell-group theme="card" style="width: 60%;margin-left: 36%;border-radius: 6px;margin-top: 3%;margin-bottom: 20%;">
+        <t-cell style="">
+          <view slot="title" style="font-size: 18rpx;">大合照</view>
+          <view slot="left-icon">
+            <t-icon name="folder" size="30" />
+          </view>
+          <view slot="description" style="line-height:15rpx;font-size: 16rpx;">98MB</view>
+        </t-cell>
+      </t-cell-group> -->
+    </view>
+  </view>
+  <view style="width: 100%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: white;">
+    <t-input style="--td-font-size-m:18rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:18rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
+      <t-icon slot="suffix" name="https://img.js.design/assets/img/669ff370f628c5f9757c4381.png#2da0d56410dd410dedc9840de5a0548d" style="margin-right: 10%;" size="42rpx"></t-icon>
+    </t-input>
+  </view>
+</scroll-view>
