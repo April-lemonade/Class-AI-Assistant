@@ -88,7 +88,7 @@
   background: rgba(245, 248, 252, 1) !important;
   border: 0;
   resize: none;
-  font-size: 18rpx !important;
+  font-size: 30rpx !important;
 }
 
 .t-tabs__item--active {
