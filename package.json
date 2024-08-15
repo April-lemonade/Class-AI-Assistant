@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "openai": "^4.55.7",
     "tdesign-miniprogram": "^1.4.5"
   }
 }

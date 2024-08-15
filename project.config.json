@@ -29,5 +29,6 @@
     "tabIndent": "auto",
     "tabSize": 2
   },
-  "appid": "wxde8ccf1ae1561d4e"
+  "appid": "wxde8ccf1ae1561d4e",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }

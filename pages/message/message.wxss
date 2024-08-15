@@ -13,32 +13,25 @@
 }
 
 .diabor {
-  align-self: flex-end;
+  width: auto;
   margin-right: 2%;
-  width: 570rpx;
+  max-width: 570rpx;
   border-radius: 40rpx 40rpx 0rpx 40rpx;
-  /* padding: 3%; */
+  padding: 3%;
   font-size: 26rpx;
   background: rgba(97, 179, 255, 0.4);
   font-weight: 400;
 }
 
 .diabor1 {
-  align-self: flex-start;
+  width: auto;
   margin-left: 2%;
-  width: 570rpx;
+  max-width: 570rpx;
   border-radius: 40rpx 40rpx 40rpx 0rpx;
-  /* padding: 3%; */
-  font-size: 24rpx;
-  line-height: 30rpx;
-  position: relative;
-  /* margin-left: 2%; */
+  padding: 3%;
+  font-size: 26rpx;
   background: rgba(254, 255, 254, 1);
 }
-
-/* .t-cell {
-  height: 20rpx;
-} */
 
 .t-cell__title-text {
   font-size: 18rpx;
@@ -84,7 +77,7 @@
 }
 
 .bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -92,7 +85,7 @@
   height: 125%;
   z-index: 1;
   background-color: white;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* 确保背景在最底层 */
 }
 
@@ -100,7 +93,7 @@
   position: relative;
   z-index: 2;
   padding-top: 5%;
-  /* margin-bottom: 50%; */
+  padding-bottom: 20%;
   /* height: calc(100vh - env(safe-area-inset-bottom)); */
   /* padding-bottom: env(safe-area-inset-bottom)+500rpx; */
   /* padding-bottom: constant(safe-area-inset-bottom); */
@@ -112,7 +105,7 @@
 }
 
 .diaText {
-  padding: 5%;
+  width: auto;
   line-height: 40rpx;
 }
 
