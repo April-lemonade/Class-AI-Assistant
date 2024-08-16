@@ -24,7 +24,7 @@
         </t-tabs>
       </view>
     </view>
-    <view style="width: 100%;display: flex;flex-direction: column;gap:15rpx;">
+    <view style="width: 100%;display: flex;flex-direction: column;gap:15rpx;margin-bottom: 10%;">
       <view wx:for="{{dialogs}}" wx:key="index">
         <t-divider wx:if="{{index==0||item.time!=dialogs[index-1].time}}" content="{{item.time}}" class="time" />
         <view style="width: 100%;justify-content: flex-end;display: flex;flex-direction: row;">
@@ -53,9 +53,9 @@
       </view>
     </view>
   </view>
-  <view style="width: 100%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: white;">
-    <t-input bind:enter="chat" value="{{inputValue}}" style="--td-font-size-m:30rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:30rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
-      <t-icon slot="suffix" name="https://img.js.design/assets/img/669ff370f628c5f9757c4381.png#2da0d56410dd410dedc9840de5a0548d" style="margin-right: 10%;" size="42rpx"></t-icon>
-    </t-input>
-  </view>
 </scroll-view>
+<view style="width: 100%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: white;">
+  <t-input bind:enter="chat" value="{{inputValue}}" style="--td-font-size-m:30rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:30rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
+    <t-icon slot="suffix" name="https://img.js.design/assets/img/669ff370f628c5f9757c4381.png#2da0d56410dd410dedc9840de5a0548d" style="margin-right: 10%;" size="42rpx"></t-icon>
+  </t-input>
+</view>
