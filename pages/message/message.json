@@ -10,7 +10,8 @@
     "t-input": "../../miniprogram_npm/tdesign-miniprogram/input/input",
     "t-navbar": "../../miniprogram_npm/tdesign-miniprogram/navbar/navbar",
     "t-tabs": "../../miniprogram_npm/tdesign-miniprogram/tabs/tabs",
-    "t-tab-panel": "../../miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel"
+    "t-tab-panel": "../../miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel",
+    "t-loading": "../../miniprogram_npm/tdesign-miniprogram/loading/loading"
   },
   "navigationStyle": "custom"
 }

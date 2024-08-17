@@ -6,6 +6,7 @@ const apiKey = 'sk-proj-6GvVzAR8GHuaHywAc50aGxcXl0yAy-Pp9u-6ncBX7stEXlfhTk6h1Ak5
 // import OpenAI from "openai";
 // const openai = new OpenAI();
 Page({
+  thinking: false,
   data: {
     inputValue: "",
     statusBarHeight: app.globalData.statusBarHeight,
@@ -68,6 +69,7 @@ Page({
     this.setData({
       dialogs: this.data.dialogs.concat(newData),
       inputValue: '',
+      thinking: true,
       scrollTop: this.data.dialogs.length * 90
     })
     let that = this
@@ -113,6 +115,7 @@ Page({
                 time: time
               };
               that.setData({
+                thinking: false,
                 dialogs: that.data.dialogs.concat(reply),
                 scrollTop: that.data.dialogs.length * 80
               })
@@ -184,7 +187,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      scrollTop: this.data.dialogs.length * 80
+    })
   },
 
   /**
