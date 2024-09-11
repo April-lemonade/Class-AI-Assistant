@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+
+  </view>
+  <view class="content">
+    <image style="width: 100%;position: relative;z-index: -5;" mode="aspectFill" src="https://img.js.design/assets/img/66e12de692716696fcfeeeed.png#cdfa1c9a900cb48683707959d1b8218a" />
+    <view class="notification">
+      <view style="font-size: 36rpx;font-weight: 500;line-height: 30prx;color: rgba(52, 142, 227, 1);">关于开学家长会的通知
+      </view>
+      <view class="allInfo">
+        <view>创建单位：金凤小学</view>
+        <view>03月05日 10:00</view>
+      </view>
+      <view class="divider"></view>
+      <!-- <rich-text nodes=""></rich-text> -->
+      <view class="detail">
+        <view>尊敬的家长：</view>
+        <view>为了进一步加强家校之间的沟通与合作，共同关注孩子的成长与发展，我校决定于下周三（7月26日）召开全校家长会。这次家长会不仅是对本学期学生学习情况的总结，更是为了让家长们更好地了解学校的教育理念、班级的整体情况，以及孩子们在校内的表现。</view>
+        <view>家长会具体安排如下：</view>
+        <view>时间：下午5:00 - 下午7:00</view>
+        <view>地点：各班教室</view>
+        <view>参会对象：全体家长</view>
+        <view>家长会流程：</view>
+        <view>学校总述（5:00 - 5:30）：由校长进行开场讲话，简要回顾本学期学校的重要活动、教育成果及发展计划，帮助家长了解学校的整体教育目标与方向。</view>
+        <view>班主任报告（5:30 - 6:00）：由各班班主任介绍班级情况，包括学生的整体学习状态、班级氛围及未来的教学计划。班主任还将针对每个年级的特点，提出相应的家庭教育建议，帮助家长更好地支持孩子的学习与成长。</view>
+        <view>家长互动交流（6:00 - 7:00）：家长与班主任及科任老师进行个别交流，讨论孩子的个性化发展问题，回答家长们的疑问与关切。这一环节旨在为家长提供更深入了解孩子学习情况和心理状态的机会，从而与学校形成教育合力。</view>
+        <view>温馨提示：</view>
+        <view>准时到场：由于家长会的内容安排紧凑，请家长们务必准时到达，以确保不遗漏重要信息。</view>
+        <view>提前准备：建议家长们提前整理好对孩子学习或生活中存在的问题及疑虑，以便在互动交流环节中与老师充分沟通。</view>
+        <view>请家长们准时出席，共同为孩子的未来出谋划策。如有任何问题，请与班主任联系。</view>
+        <view>此致</view>
+        <view>校长办公室</view>
+        <view>2024年03月05日</view>
+      </view>
+    </view>
+
+  </view>
+</view>

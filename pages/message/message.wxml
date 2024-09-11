@@ -11,8 +11,8 @@
   </view>
   <view class="content">
     <view class="intro" style="align-items: center;display: flex;flex-direction: column;gap:20rpx">
-      <t-avatar class="avatar-example" image="https://img.js.design/assets/img/669e04ddf7b4dc16d85eafaf.png#ced05ab96d19839c0eab01f7cefae682" size="large" />
-      <view style="border-radius: 13px 13px, 13px, 13px;background: rgba(254, 255, 254, 1);box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);width: 80%;padding: 5%;font-size: 24rpx;border-radius: 40rpx;background: rgba(255, 255, 255, 1);line-height: 35rpx;">
+      <t-avatar style="width: 180rpx;height:180rpx" image="https://img.js.design/assets/img/669e04ddf7b4dc16d85eafaf.png#ced05ab96d19839c0eab01f7cefae682" size="large" />
+      <view style="border-radius: 13px 13px, 13px, 13px;background: rgba(254, 255, 254, 1);box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);width: 80%;padding: 5%;font-size: 30rpx;border-radius: 66.67rpx;background: rgba(255, 255, 255, 1);line-height: 40rpx;">
         王老师，您好！我是您的AI助教小诗，我可以帮您回复家长消息、上传班级资料文件、转发通知到班级群内、帮您搜索班级资料等等，也可以回答您的各种问题，给您的家校沟通工作提供帮助。请问有什么需要我帮助呢?
       </view>
       <view>
@@ -33,12 +33,12 @@
               <rich-text nodes="{{item.content}}"></rich-text>
             </view>
           </view>
-          <view class="diabor" wx:if="{{item.type=='file'}}" style="background: white;border-radius: 20rpx;padding:0;--td-cell-padding:0;width: 570rpx">
+          <view class="diabor" wx:if="{{item.type=='file'}}" style="background: white;border-radius: 20rpx;padding:0;--td-cell-padding:0;max-width: 1090rpx;margin-top: -5%;width: 665rpx;border: 2rpx solid rgba(229, 229, 229, 1);">
             <t-cell-group theme="card" style="margin:0">
               <t-cell style="border-radius: 6px;">
-                <view slot="title" style="font-size: 24rpx;font-weight: 400;">{{item.content}}</view>
+                <view slot="title" style="font-size: 26rpx;font-weight: 400;">{{item.content}}</view>
                 <image slot="image" style="width: 73.25rpx;height: 60rpx;" src="https://img.js.design/assets/img/669fdad96e8e19d665cce995.png#d03b8d5e3bb5045b9af1d0fd318f63b2" />
-                <view slot="description" style="line-height:29rpx;font-size: 22rpx;">{{item.size}}</view>
+                <view slot="description" style="line-height:29rpx;font-size: 24rpx;">{{item.size}}</view>
               </t-cell>
             </t-cell-group>
           </view>

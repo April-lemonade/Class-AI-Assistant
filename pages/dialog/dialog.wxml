@@ -19,33 +19,35 @@
       <t-avatar style="width: 20%;--td-avatar-border-width-medium:3rpx" image="https://img.js.design/assets/img/669e072e1fc558ec9921f8b7.png#d4aaf232073833d58c56dc06afcfec6d" bordered />
       <view class="hello-info" style="display: flex;flex-direction: column;justify-content: space-between;">
         <view class="dateweather">今天是6月10日，星期一，多云</view>
-        <view style="font-size: 36rpx;color: rgba(255, 255, 255, 1);">王老师，上午好！</view>
+        <view style="font-size: 36rpx;color: rgba(51, 51, 51, 1);">王老师，上午好！</view>
       </view>
     </view>
     <t-divider style="border: none;margin-top: 5%;">
-      <view slot="content" style="font-size: 24rpx;color: rgba(255, 255, 255, 1);">我创建的班级
-      </view>
     </t-divider>
-    <t-cell-group theme="card" style="margin: 0;box-shadow: 0px 4px 30px  rgba(0, 48, 102, 0.1);border-radius: 40rpx;">
-      <t-cell hover arrow image="https://img.js.design/assets/img/669e0c27d8604884275ab878.png#130fa23534a9543506c1daf3293d8f8d">
-        <view slot="title" style="font-size:28rpx">三年级二班</view>
-        <view slot="description" style="display: flex;flex-direction: column;width: 90%;justify-content: space-between">
-          <view class="classinfo" style="display: flex;flex-direction: row;justify-content: space-between;width:100%;">
+    <t-cell-group theme="card" style="margin: 0;box-shadow: 0px 4px 30px  rgba(0, 48, 102, 0.1);border-radius: 49.83rpx;height: 223rpx;">
+      <t-cell hover arrow style="padding: 40rpx;">
+        <view slot="image">
+          <image style="height: 144rpx;width: 144rpx;border-radius: 30rpx;" src="https://img.js.design/assets/img/669fb2a5e6b41f30e1dda1af.jpg#e436e4d032f5502133f180cc0ecce7a6" />
+        </view>
+        <!-- <view slot="title" style="font-size:28rpx;">三年级二班</view> -->
+        <view slot="description">
+          <view class="classinfo" style="margin-left: 5%;">
+            <view style="font-size:30rpx;color:rgba(51, 51, 51, 1);font-weight: 500;">三年级二班</view>
             <view class="dateweather" style="color:rgba(51, 51, 51, 0.65)">共40人</view>
             <view class="dateweather" style="color:rgba(51, 51, 51, 0.65)">班级ID：66003410</view>
           </view>
-          <view class="classOperation" style="display: flex;justify-content: space-between;">
+          <!-- <view class="classOperation" style="display: flex;justify-content: space-between;">
             <t-button theme="primary" class="classOperBtn" size="extra-small" theme="primary">邀请老师</t-button>
             <t-button class="classOperBtn" size="extra-small" theme="primary">邀请家长</t-button>
             <t-button class="classOperBtn" size="extra-small" theme="primary">邀请学生</t-button>
-          </view>
+          </view> -->
         </view>
       </t-cell>
     </t-cell-group>
     <t-cell-group theme="card" style="margin: 5% 0;box-shadow: 0px 4px 60px  rgba(0, 48, 102, 0.15);border-radius: 40rpx;">
-      <t-cell>
-        <view style="font-size:36rpx" slot="title">工作台</view>
-        <t-grid slot="description">
+      <t-cell style="padding: 40rpx;">
+        <view style="font-size:36rpx;" slot="title">工作台</view>
+        <t-grid slot="description" style="margin-left: 0rpx;">
           <t-grid-item wx:for="{{list}}" wx:key="index" text="{{item.label}}" bind:tap="godetail" data-value="{{index}}" image="slot">
             <view slot="image">
               <image style="height: {{item.height}}rpx;width: {{item.width}}rpx;" src="{{item.icon}}" />
@@ -55,7 +57,7 @@
         </t-grid>
       </t-cell>
     </t-cell-group>
-    </view>
+  </view>
 
 </scroll-view>
 <tab-bar style="width: 100%;"></tab-bar>

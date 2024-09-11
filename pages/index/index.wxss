@@ -68,7 +68,7 @@
   left: 70rpx;
   top: 485rpx;
   width: 610rpx;
-  height: 130rpx;
+  height: 168rpx;
   opacity: 1;
   border-radius: 42rpx;
   background: rgba(0, 0, 0, 0.08);

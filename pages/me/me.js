@@ -12,10 +12,7 @@ Page({
       label: "名片",
       icon: "card"
     }, {
-      label: "二维码",
-      icon: "code"
-    }, {
-      label: "教师认证",
+      label: "认证",
       icon: "certificate"
     }],
     AIOps: ["形象", "声音", "人设"],
