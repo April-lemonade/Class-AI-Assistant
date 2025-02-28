@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/homework/homework",
     "pages/dialog/dialog",
     "pages/logs/logs",
     "pages/message/message",
@@ -9,7 +10,16 @@
     "pages/gallery/gallery",
     "pages/templet/templet",
     "pages/person/person",
-    "pages/notidetail/notidetail"
+    "pages/notidetail/notidetail",
+    "pages/select/select",
+    "pages/tongzhigonggao/tongzhigonggao",
+    "pages/grade/grade",
+    "pages/task/task",
+    "pages/filltable/filltable",
+    "pages/comment/comment",
+    "pages/award/award",
+    "pages/money/money",
+    "pages/collectinfo/collectinfo"
   ],
   "window": {
     "navigationBarTextStyle": "black",

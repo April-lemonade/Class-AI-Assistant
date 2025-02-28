@@ -63,7 +63,7 @@ Page({
 
   goTemplet() {
     wx.navigateTo({
-      url: '../../pages/templet/templet',
+      url: '../../pages/select/select',
     })
   },
 

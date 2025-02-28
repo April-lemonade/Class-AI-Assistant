@@ -3,9 +3,10 @@
   height: calc(100vh - 66rpx);
   /* min-height: calc(100vh - 66rpx); */
   /* overflow: hidden; */
+  overflow-x: hidden;
   padding-bottom: env(safe-area-inset-bottom);
   padding-bottom: constant(safe-area-inset-bottom); 
-  background: white;
+  background: transparent;
   /* 确保子元素不会超出容器 */
 }
 

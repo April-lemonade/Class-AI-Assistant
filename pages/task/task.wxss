@@ -1,0 +1,220 @@
+/* pages/homework/homework.wxss */
+.container {
+  position: relative;
+  height: 100vh;
+  /* min-height: calc(100vh - 66rpx); */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 1);
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  width: 312rpx;
+  height: 312rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 0;
+  left: 488rpx;
+}
+
+.block2 {
+  width: 1070rpx;
+  height: 1070rpx;
+  background-color: rgba(97, 179, 255, 0.6);
+  top: -217rpx;
+  left: -527rpx;
+}
+
+.block3 {
+  width: 253rpx;
+  height: 253rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 1101rpx;
+  left: -89rpx;
+}
+
+.block4 {
+  width: 514rpx;
+  height: 514rpx;
+  background-color: rgba(29, 245, 198, 0.6);
+  top: 693rpx;
+  left: 286rpx;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0% 0%;
+  margin-bottom: 10%;
+  /* 确保内容在背景之上 */
+}
+
+.custom-tabs {
+  background-color: white;
+}
+
+.t-tabs__nav {
+  background-color: white;
+  /* --td-tab-border-color:none; */
+}
+
+.tabPanelstyle {
+  padding: 5%;
+  /* background: transparent; */
+
+}
+
+.homeworkContainer {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50rpx;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2rpx solid rgba(32, 230, 187, 0.12);
+  box-shadow: 0rpx 4rpx 60rpx rgba(0, 48, 102, 0.12);
+  backdrop-filter: blur(4rpx);
+  margin-bottom: 5%;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  /* padding: 8%; */
+  padding-top: 8%;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 5%;
+  gap: 5%;
+  /* justify-content: space-between; */
+}
+
+.t-fab{
+  /* width: 100vw; */
+  /* align-items: center; */
+  right: 43vw !important;
+}
+
+.t-avatar--circle {
+  width: 85rpx;
+  height: 85rpx;
+  border: 1px solid rgba(127, 192, 251, 1);
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 400;
+  letter-spacing: 0rpx;
+  line-height: 40rpx;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  /* vertical-align: top; */
+}
+
+.subtitle {
+  font-size: 24rpx;
+  font-weight: 400;
+  letter-spacing: 0rpx;
+  /* line-height: 40rpx; */
+  color: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.detail {
+  padding: 0 8%;
+  font-size: 30rpx;
+  font-weight: 400;
+  letter-spacing: 0rpx;
+  line-height: 39.78rpx;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: justify;
+  vertical-align: top;
+  margin-bottom: 5%;
+
+}
+
+.btn {
+  width: 84%;
+  display: flex;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.4);
+  /* justify-content: space-between; */
+  justify-items: center;
+  font-size: 24rpx;
+  font-weight: 400;
+  letter-spacing: 0rpx;
+  line-height: 40rpx;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 8%;
+}
+
+.t-tabs__scroll--split::after {
+  background-color: transparent !important;
+}
+
+.t-tabs__track {
+  width: 25% !important;
+  height: 10rpx !important;
+}
+
+.classinfo {
+  height: 144rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.t-cell__description {
+  height: 144rpx;
+  font-size: var(--td-cell-description-font-size, var(--td-font-size-base, 28rpx));
+  line-height: 46rpx !important;
+  color: var(--td-cell-description-color, var(--td-text-color-secondary, var(--td-font-gray-2, rgba(0, 0, 0, 0.6))));
+}
+
+.dateweather {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 28rpx;
+  font-weight: 400;
+  letter-spacing: 0px;
+  /* line-height: 40px; */
+  color: rgba(51, 51, 51, 0.65);
+}
+
+.t-grid-item .t-avatar--circle {
+  width: 85rpx;
+  height: 85rpx;
+  border: none;
+}
+
+.t-progress__inner{
+  background:url(https://img.js.design/assets/img/6722674a4bb2e8ffc04e8b46.png#638a99d70ff59d0856e72a02c8935ba3) no-repeat !important;
+  background-size: cover !important;
+}
+
+.t-progress--status--success .t-progress__inner {
+  background:url(https://img.js.design/assets/img/6722674a4bb2e8ffc04e8b46.png#638a99d70ff59d0856e72a02c8935ba3) no-repeat !important;
+  background-size: cover !important;
+}

@@ -18,8 +18,8 @@
     <view class="hello" style="display: flex;flex-direction: row;height:{{statusBarHeight}};width: 100%;padding-top: {{statusBarHeight}}px;">
       <t-avatar style="width: 20%;--td-avatar-border-width-medium:3rpx" image="https://img.js.design/assets/img/669e072e1fc558ec9921f8b7.png#d4aaf232073833d58c56dc06afcfec6d" bordered />
       <view class="hello-info" style="display: flex;flex-direction: column;justify-content: space-between;">
-        <view class="dateweather">今天是6月10日，星期一，多云</view>
-        <view style="font-size: 36rpx;color: rgba(51, 51, 51, 1);">王老师，上午好！</view>
+        <view class="dateweather">今天是6月10日，星期一</view>
+        <view style="font-size: 36rpx;color: rgba(51, 51, 51, 1);font-weight: bold;">王老师，上午好！</view>
       </view>
     </view>
     <t-divider style="border: none;margin-top: 5%;">
@@ -27,7 +27,7 @@
     <t-cell-group theme="card" style="margin: 0;box-shadow: 0px 4px 30px  rgba(0, 48, 102, 0.1);border-radius: 49.83rpx;height: 223rpx;">
       <t-cell hover arrow style="padding: 40rpx;">
         <view slot="image">
-          <image style="height: 144rpx;width: 144rpx;border-radius: 30rpx;" src="https://img.js.design/assets/img/669fb2a5e6b41f30e1dda1af.jpg#e436e4d032f5502133f180cc0ecce7a6" />
+          <image mode="aspectFill" style="height: 144rpx;width: 144rpx;border-radius: 30rpx;" src="https://img.js.design/assets/img/669fb2a5e6b41f30e1dda1af.jpg#e436e4d032f5502133f180cc0ecce7a6" />
         </view>
         <!-- <view slot="title" style="font-size:28rpx;">三年级二班</view> -->
         <view slot="description">
@@ -44,9 +44,9 @@
         </view>
       </t-cell>
     </t-cell-group>
-    <t-cell-group theme="card" style="margin: 5% 0;box-shadow: 0px 4px 60px  rgba(0, 48, 102, 0.15);border-radius: 40rpx;">
+    <t-cell-group theme="card" style="margin-top: 60rpx;box-shadow: 0px 4px 60px  rgba(0, 48, 102, 0.15);border-radius: 40rpx;margin-left: 0%;margin-right: 0%;">
       <t-cell style="padding: 40rpx;">
-        <view style="font-size:36rpx;" slot="title">工作台</view>
+        <view style="font-size:36rpx;font-weight: bold;" slot="title">工作台</view>
         <t-grid slot="description" style="margin-left: 0rpx;">
           <t-grid-item wx:for="{{list}}" wx:key="index" text="{{item.label}}" bind:tap="godetail" data-value="{{index}}" image="slot">
             <view slot="image">

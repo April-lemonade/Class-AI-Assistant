@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <view wx:for="{{select}}" wx:key="index" style="width: 80%rpx;height: 220rpx;display: flex;flex-direction: row;border-radius: 50rpx;background: rgba(219, 240, 255, 0.65);border: 2rpx solid white;box-shadow: 0rpx 4rpx 50rpx  rgba(2, 65, 99, 0.25);backdrop-filter: blur(4rpx);padding: 3%;align-items: center;" bind:tap="godetail">
+      <view style="display: flex;flex-direction: column;width: 55%;padding: 5% 5%;justify-content: space-between;">
+        <view class="title" style="color:{{item.color1}}">{{item.title}}</view>
+        <view class="desc" style="color:{{item.color2}}">{{item.desc}}</view>
+      </view>
+      <image style="width: {{item.width}}rpx;height: {{item.width}}rpx;" src="{{item.img}}" />
+    </view>
+  </view>
+</view>

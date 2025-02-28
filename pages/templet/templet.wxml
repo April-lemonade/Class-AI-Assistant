@@ -3,39 +3,40 @@
   <view class="bg">
     <view class="background-block block1"></view>
     <view class="background-block block2"></view>
-    <view class="background-block block3"></view>
-    <view class="background-block block4"></view>
+    <!-- <view class="background-block block3"></view>
+    <view class="background-block block4"></view> -->
   </view>
   <view class="content">
-    <t-tabs class="nav" defaultValue="{{2}}" theme="tag" style="--td-tab-nav-bg-color:transparent;--td-tab-item-tag-bg:transparent;--td-tab-item-tag-active-bg:transparent;--td-tab-item-active-color:black;" split="{{false}}" swipeable="{{false}}" space-evenly="{{false}}">
+    <view class="ops">
+      <t-tabs defaultValue="{{2}}" theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+        <t-tab-panel wx:for="{{ops}}" style="width: 150rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+      </t-tabs>
+      <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+        <t-tab-panel wx:for="{{ops1}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+      </t-tabs>
+      <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
+        <t-tab-panel wx:for="{{ops2}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
+      </t-tabs>
+    </view>
+    <!-- <t-tabs class="nav" defaultValue="{{2}}" theme="tag" style="--td-tab-nav-bg-color:transparent;--td-tab-item-tag-bg:transparent;--td-tab-item-tag-active-bg:transparent;--td-tab-item-active-color:black;" split="{{false}}" swipeable="{{false}}" space-evenly="{{false}}">
       <t-tab-panel wx:for="{{btns}}" wx:key="index" label="{{item}}" value="{{index}}" />
-    </t-tabs>
+    </t-tabs> -->
     <t-cell-group theme="card" style="margin-top:2%;margin-bottom: 100rpx;box-shadow: 0px 6px 16px  rgba(0, 0, 0, 0.06);border-radius: 45rpx;">
       <t-cell align="top">
-        <view slot="title" style="font-size:30rpx">通知模板</view>
+        <view slot="title" style="font-size:30rpx;font-weight: bold;">致家长的一封信</view>
         <view slot="note" style="display: flex;flex-direction: row;font-size: 20rpx;align-items: center;">
-          <t-icon name="edit" size="18" />编辑
+          <!-- <t-icon name="edit" size="18" />编辑 -->
+          <view class="change">换一个</view>
         </view>
         <view slot="description" style="display:flex;flex-direction:column">
-          <view style="font-size: 24rpx;color: rgba(0, 0, 0, 0.4);">轻松选择各类模板进行文案编辑</view>
+          <!-- <view style="font-size: 24rpx;color: rgba(0, 0, 0, 0.4);">轻松选择各类模板进行文案编辑</view> -->
           <!-- <t-row gutter="20">
             <t-col wx:for="{{ops}}" wx:key="index" span="8">
               <t-check-tag style="width: 100%;text-align: center;align-items: center;justify-content: center;" default-checked="{{index%3==0 || index==2?true:false}}" content="{{item}}" />
             </t-col>
           </t-row> -->
-          <view class="ops">
-            <t-tabs defaultValue="{{2}}" theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
-              <t-tab-panel wx:for="{{ops}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
-            </t-tabs>
-            <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
-              <t-tab-panel wx:for="{{ops1}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
-            </t-tabs>
-            <t-tabs theme="tag" space-evenly="{{false}}" split="{{false}}" style="width:100vw;--td-tab-font-size:26rpx;--td-tab-item-tag-active-bg:white;--td-tab-item-disabled-color:white;">
-              <t-tab-panel wx:for="{{ops2}}" style="width: 165rpx;font-weight: normal;" wx:key="index" label="{{item}}" value="{{index}}" disabled="{{index==0}}" />
-            </t-tabs>
-          </view>
           <t-divider />
-          <view style="font-size: 24rpx;width: 100%;line-height: 42rpx;height: max-content;gap: 20rpx;display: flex;flex-direction: column;">
+          <view style="font-size: 30rpx;width: 100%;line-height: 45rpx;height: max-content;gap: 20rpx;display: flex;flex-direction: column;text-align: justify;">
             <view>尊敬的家长:</view>
             <view>关注安全，关注孩子的健康成长，是我们共同的心愿。履行监护责任，按时接送孩子是家长的责任。现就家长按时接送孩子问题提出如下要求：</view>
             <view>
@@ -52,9 +53,13 @@
       </t-cell>
     </t-cell-group>
   </view>
-  <view style="width: 100%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: white;">
-    <t-input style="--td-font-size-m:30rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:30rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
+  <view style="width: 92%;position: fixed;bottom: 0rpx;z-index: 2;padding-bottom: env(safe-area-inset-bottom);background: transparent;padding-left: 4%;">
+    <!-- <t-input style="--td-font-size-m:30rpx" prefixIcon="{{ {name:'https://img.js.design/assets/img/669fe43e2fc96a1b0cbe4517.png#f201f0a36938452941ad597c3c67d18b'} }}" placeholder="快向我发消息吧" placeholder-style="font-size:30rpx" suffixIcon="{{ {name:'https://img.js.design/assets/img/669ff379d664ced7d918f56a.png#79adc2fc57ca911be7f27c6b157a9de2',size:'42rpx'} }}">
       <t-icon slot="suffix" name="https://img.js.design/assets/img/669ff370f628c5f9757c4381.png#2da0d56410dd410dedc9840de5a0548d" style="margin-right: 10%;" size="42rpx"></t-icon>
-    </t-input>
+    </t-input> -->
+    <!-- <view class="bigBtn">编辑</view> -->
+    <t-button  size="large" block style="border-radius: 30rpx;background: linear-gradient(135.89deg, rgba(127, 192, 253, 1) 0%, rgba(72, 245, 207, 1) 100%);color: white;">发布</t-button>
   </view>
+
+
 </scroll-view>

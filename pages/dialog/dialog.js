@@ -25,7 +25,7 @@ Page({
       { label: '奖励奖状', icon: 'https://img.js.design/assets/img/669f743ca4202cb4cc4e817e.png#ccf0e78456ce0c304252521e0b9cd4e7', width: 66, height: 81 },
       { label: '班级收款', icon: 'https://img.js.design/assets/img/669f71991fc558ec993ba741.png#7f10ce92b1addbc0f504bfa372a2c55b', width: 80, height: 74 },
       { label: '信息收集', icon: 'https://img.js.design/assets/img/669f71a11be0ad3ed8134a5a.png#c3b5c3970eedd5d0a1aa2cb1895de02f', width: 71, height: 75 },
-      { label: '更多功能', icon: 'https://img.js.design/assets/img/669f7490dd0e890502a6c5bc.png#6f4a75705ceac23182de815488e0e049', width: 84, height:74 },
+      { label: '更多功能', icon: 'https://img.js.design/assets/img/669f7490dd0e890502a6c5bc.png#6f4a75705ceac23182de815488e0e049', width: 84, height: 74 },
     ],
     functions: [{
       title: "AI模板",
@@ -46,6 +46,42 @@ Page({
     if (e.currentTarget.dataset.value == 3) {
       wx.navigateTo({
         url: '/pages/gallery/gallery',
+      })
+    } else if (e.currentTarget.dataset.value == 0) {
+      wx.navigateTo({
+        url: '/pages/homework/homework',
+      })
+    } else if (e.currentTarget.dataset.value == 1) {
+      wx.navigateTo({
+        url: '/pages/tongzhigonggao/tongzhigonggao',
+      })
+    } else if (e.currentTarget.dataset.value == 2) {
+      wx.navigateTo({
+        url: '/pages/grade/grade',
+      })
+    } else if (e.currentTarget.dataset.value == 4) {
+      wx.navigateTo({
+        url: '/pages/task/task',
+      })
+    } else if (e.currentTarget.dataset.value == 5) {
+      wx.navigateTo({
+        url: '/pages/filltable/filltable',
+      })
+    } else if (e.currentTarget.dataset.value == 7) {
+      wx.navigateTo({
+        url: '/pages/comment/comment',
+      })
+    } else if (e.currentTarget.dataset.value == 8) {
+      wx.navigateTo({
+        url: '/pages/award/award',
+      })
+    } else if (e.currentTarget.dataset.value == 9) {
+      wx.navigateTo({
+        url: '/pages/money/money',
+      })
+    } else if (e.currentTarget.dataset.value == 10) {
+      wx.navigateTo({
+        url: '/pages/collectinfo/collectinfo',
       })
     }
   },

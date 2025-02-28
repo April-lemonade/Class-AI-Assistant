@@ -15,7 +15,7 @@ Page({
       label: "认证",
       icon: "certificate"
     }],
-    AIOps: ["形象", "声音", "人设"],
+    AIOps: ["形象", "声音", "设定"],
     tabs: [{
       label: '我的班级',
       icon: 'https://img.js.design/assets/img/669f97ef6e8e19d665c91ceb.png#a536ae269e7fc634878708016ffe5b87',

@@ -1,0 +1,57 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs animation="{{ { duration: 0.6 } }}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" t-class-content="custom-panel">
+      <t-tab-panel label="已发布的打卡" value="0" class="tabPanelstyle">
+        <view style="display: flex;flex-direction: column;">
+          <view wx:for="{{homework}}" wx:key="index" class="homeworkContainer">
+            <view class="top">
+              <t-avatar size="85rpx" image="{{item.img}}" />
+              <view style="display: flex;flex-direction: column;justify-content: space-between;height: 85rpx;width: 100%;">
+                <view class="title">{{item.title}} </view>
+                <view style="display: flex;flex-direction: row;justify-content: space-between;width: 100%;">
+                  <view class="subtitle">发布者：{{item.person}}</view>
+                  <view class="subtitle">{{item.date}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="detail">{{item.content}}</view>
+            <view style="border-radius: 0px 0px, 50rpx, 50rpx;background: rgba(97, 179, 255, 0.1);height: 73.75rpx;justify-content: center;display: flex;flex-direction: column;width: 100%;">
+              <view class="btn">
+                <view wx:for="{{btns}}" wx:key="index" style="display: flex;flex-direction: row;width:33%;gap: 10rpx;justify-content: {{index==2?'flex-end':index==1?'center':''}};border-right: {{index!=2?'solid 1rpx':''}};">
+                  <t-icon name="{{item.name}}" size="32rpx" />
+                  <view>{{item.text}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </t-tab-panel>
+      <t-tab-panel label="已结束的打卡" value="1" class="tabPanelstyle">
+        <t-cell-group wx:for="{{tasks}}" wx:key="index" theme="card" style="margin: 0;box-shadow: 0px 4px 30px  rgba(0, 48, 102, 0.1);border-radius: 49.83rpx;height: 223rpx;margin-bottom: 5%;">
+          <t-cell hover style="padding: 40rpx;">
+            <view slot="description">
+              <view class="classinfo" style="margin-left: 5%;">
+                <view style="font-size:30rpx;color:rgba(51, 51, 51, 1);font-weight: 500;">[阅读] {{item.name}}</view>
+                <view class="dateweather" style="color:rgba(51, 51, 51, 0.65)">
+                  <view>共40人</view>
+                  <view>已完成：{{item.value1}}人</view>
+                  <view>完成率：{{item.value2}}%</view>
+                </view>
+                <t-progress stroke-width='17.11rpx' style="width:100%" percentage="{{item.value2}}" color="gradient(203.26deg, rgba(29, 245, 198, 1) 0%, rgba(97, 179, 255, 1) 100%);" label="" />
+              </view>
+            </view>
+          </t-cell>
+        </t-cell-group>
+      </t-tab-panel>
+    </t-tabs>
+    <view wx:if="{{current==0}}">
+      <t-fab icon="add" bind:click="handleClick" />
+    </view>
+  </view>
+</scroll-view>

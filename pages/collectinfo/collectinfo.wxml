@@ -1,0 +1,6 @@
+<scroll-view class="container" scroll-y>
+  <image mode="aspectFill" style="width: 100vw;height: 100vh;position: relative;" src="https://img.js.design/assets/img/671d393e85f91d5fbddd97fa.png#670694924d03df9a431ead36d3c37e9a" />
+  <view style="text-align: center;position: relative;top: -38%;font-size: 30rpx;color: rgba(0, 0, 0, 0.3);">您还没有发布信息收集哦！</view>
+  <t-fab icon="add" bind:click="handleClick" />
+
+</scroll-view>

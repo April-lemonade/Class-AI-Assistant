@@ -1,0 +1,23 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+      <t-tab-panel label="制作电子奖状" value="0" />
+      <t-tab-panel label="小红花奖励" value="1" />
+    </t-tabs>
+    <view style="border-radius: 30rpx;background: rgba(255, 255, 255, 1);box-shadow: 0rpx 2rpx 60rpx  rgba(0, 48, 102, 0.12);backdrop-filter: blur(4rpx);margin:5%;padding: 5% 0%;">
+      <view style="font-size: 34rpx;line-height: 30rpx;color: rgba(51, 51, 51, 0.9);margin: 5%">选择要制作的电子奖状模板</view>
+      <t-grid class="block" column="{{2}}" style="background-color:transparent;--td-grid-item-bg-color:transparent">
+        <t-grid-item style="--td-grid-item-image-middle-width:290rpx;--td-grid-item-image-middle-height:206rpx;" wx:for="{{imgs}}" wx:key="index" image="slot">
+          <image slot="image" src="{{item}}" style="width: 290rpx;height: 206rpx;" />
+        </t-grid-item>
+      </t-grid>
+    </view>
+
+  </view>
+</scroll-view>

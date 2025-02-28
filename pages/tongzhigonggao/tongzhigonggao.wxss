@@ -1,0 +1,86 @@
+.container {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: transparent;
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  width: 312rpx;
+  height: 312rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 0;
+  left: 488rpx;
+}
+
+.block2 {
+  width: 1070rpx;
+  height: 1070rpx;
+  background-color: rgba(97, 179, 255, 0.6);
+  top: -217rpx;
+  left: -527rpx;
+}
+
+.block3 {
+  width: 253rpx;
+  height: 253rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 1101rpx;
+  left: -89rpx;
+}
+
+.block4 {
+  width: 514rpx;
+  height: 514rpx;
+  background-color: rgba(29, 245, 198, 0.6);
+  top: 693rpx;
+  left: 286rpx;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0% 0%;
+  /* margin-bottom: 10%; */
+}
+
+.t-tabs__nav {
+  background-color: white;
+  /* --td-tab-border-color:none; */
+}
+
+.t-tabs__scroll--split::after {
+  background-color: transparent !important;
+}
+
+.t-tabs__track {
+  width: 25% !important;
+  height: 10rpx !important;
+}
+
+.t-fab{
+  /* width: 100vw; */
+  /* align-items: center; */
+  right: 43vw !important;
+}

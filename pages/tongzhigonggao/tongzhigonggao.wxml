@@ -1,0 +1,36 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs animation="{{ { duration: 0.6 } }}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" t-class-content="custom-panel">
+      <t-tab-panel label="已发布的通知" value="0" style="padding: 5%;display: flex;flex-direction: column;">
+        <view wx:for="{{noti}}" wx:key="{{index}}" style="border-radius: 30rpx;box-shadow: 0rpx 5rpx 30rpx  rgba(0, 0, 0, 0.1);display: flex;flex-direction: column;overflow: hidden;background: white;margin-bottom: 5%;">
+          <image style="width: 100%;height: 258rpx;" mode="aspectFill" src="{{item.img}}" />
+          <view style="padding: 3%;">
+            <view style="font-size: 30rpx;font-weight: 500;letter-spacing: 0rpx;line-height: 30rpx;color: rgba(0, 0, 0, 0.6);margin-bottom: 2%;">{{item.title}}</view>
+            <view style="display: flex;flex-direction: row;justify-content: space-between;font-size: 20rpx;font-weight: 400;letter-spacing: 0rpx;line-height: 40rpx;color: rgba(0, 0, 0, 0.4);">
+              <view>发布者：{{item.person}}</view>
+              <view>{{item.date}}</view>
+              <view style="display: flex;flex-direction: row;gap: 10%;justify-content: center;align-items: center;">
+                <t-icon name="browse" />
+                <view>{{item.see}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </t-tab-panel>
+      <t-tab-panel label="草稿箱" value="1" class="tabPanelstyle" style="overflow: hidden;">
+        <!-- <t-empty style="margin-top: 20%;" t-class="empty-cls" style="position: relative;mix-blend-mode: multiply;z-index: 2;" t-class-image="t-empty__image" image="https://img.js.design/assets/img/671e7972df971bdf71626307.png#a30ce5cca3aeb1e65f2560f03bf6fcbd" description="您还没有保存的草稿哦！" /> -->
+        <image mode="aspectFill" style="width: 100vw;height: 120vh;" src="https://img.js.design/assets/img/672265877dd312149ec4bd22.png#e11f61c1e7e0cb618bf38d507ae27f2a" />
+        <view style="text-align: center;position: absolute;top: 53%;font-size: 30rpx;color: rgba(0, 0, 0, 0.3);width: 100vw;">您还没有保存的草稿哦！</view>
+      </t-tab-panel>
+    </t-tabs>
+    <t-fab icon="add" bind:click="handleClick" />
+  </view>
+
+</scroll-view>

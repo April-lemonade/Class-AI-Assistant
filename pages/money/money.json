@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "t-fab": "../../miniprogram_npm/tdesign-miniprogram/fab/fab",
+    "t-empty": "../../miniprogram_npm/tdesign-miniprogram/empty/empty"
+  },
+  "navigationBarTitleText": "班级收款"
+}

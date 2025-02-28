@@ -1,0 +1,25 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs animation="{{ { duration: 0.6 } }}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" t-class-content="custom-panel">
+      <t-tab-panel label="成绩列表" value="0" class="tabPanelstyle">
+        <t-grid class="block" column="{{4}}" style="background-color:transparent;--td-grid-item-bg-color:transparent">
+          <t-grid-item style="--td-grid-item-image-middle-width:150rpx;--td-grid-item-image-middle-height:150rpx;" wx:for="{{stu}}" wx:key="index" text="{{item.name}}" image="slot" data-name="{{item.name}}" data-img="{{item.img}}" bind:tap="godetail">
+            <image slot="image" src="{{item.img}}" style="width: 150rpx;height: 150rpx;border-radius: 30rpx;box-shadow: 0px 8px 16px  rgba(51, 51, 51, 0.1);" mode="aspectFill" />
+          </t-grid-item>
+        </t-grid>
+      </t-tab-panel>
+      <t-tab-panel label="私密成绩" value="1" class="tabPanelstyle">
+        <!-- <t-empty mode="aspectFill" style="width: 100vw;height: 120vh;" image="https://img.js.design/assets/img/6722658d7dd312149ec4bd34.png#ecaa2f30679c816fdf0a58f81d3893b1" description="您还没有上传学生成绩哦！" /> -->
+        <image mode="aspectFill" style="width: 100vw;height: 120vh;" src="https://img.js.design/assets/img/6722658d7dd312149ec4bd34.png#ecaa2f30679c816fdf0a58f81d3893b1" />
+        <view style="text-align: center;position: absolute;top: 53%;font-size: 30rpx;color: rgba(0, 0, 0, 0.3);width: 100vw;">您还没有上传学生成绩哦！</view>
+      </t-tab-panel>
+    </t-tabs>
+    <t-fab icon="add" bind:click="handleClick" />
+  </view>
+</scroll-view>

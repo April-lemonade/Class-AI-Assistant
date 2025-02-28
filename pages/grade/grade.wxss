@@ -1,0 +1,101 @@
+.container {
+  position: relative;
+  height: 100vh;
+  /* min-height: calc(100vh - 66rpx); */
+  /* overflow: hidden; */
+  background: white;
+  /* 确保子元素不会超出容器 */
+}
+
+.background-block {
+  width: 100vw;
+  position: absolute;
+  border-radius: 50%;
+  /* 如果你想要圆形背景块 */
+  filter: blur(120px);
+  /* 如果需要模糊效果 */
+}
+
+.block1 {
+  width: 312rpx;
+  height: 312rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 0;
+  left: 488rpx;
+}
+
+.block2 {
+  width: 1070rpx;
+  height: 1070rpx;
+  background-color: rgba(97, 179, 255, 0.6);
+  top: -217rpx;
+  left: -527rpx;
+}
+
+.block3 {
+  width: 253rpx;
+  height: 253rpx;
+  background-color: rgba(255, 243, 138, 0.6);
+  top: 1101rpx;
+  left: -89rpx;
+}
+
+.block4 {
+  width: 514rpx;
+  height: 514rpx;
+  background-color: rgba(29, 245, 198, 0.6);
+  top: 693rpx;
+  left: 286rpx;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+  /* 确保背景在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  /* 确保内容在背景之上 */
+}
+
+.t-tabs__item-inner--tag {
+  font-size: 30rpx !important;
+  box-shadow: 0px 8px 16px rgba(51, 51, 51, 0.05);
+  color: var(--td-brand-color);
+  border-bottom: 15rpx !important;
+}
+
+.t-tabs__item-inner--active.t-tabs__item-inner--tag {
+  background-color: var(--td-brand-color) !important;
+  color: white !important;
+  font-weight: 400 !important;
+}
+
+.t-tabs__scroll--split::after {
+  background-color: transparent !important;
+}
+
+.t-tabs__track {
+  width: 25% !important;
+  height: 10rpx !important;
+}
+
+.t-tabs__nav {
+  background-color: white;
+  /* --td-tab-border-color:none; */
+}
+
+.t-fab{
+  /* width: 100vw; */
+  /* align-items: center; */
+  right: 43vw !important;
+}

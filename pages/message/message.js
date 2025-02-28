@@ -1,10 +1,5 @@
-// pages/message/message.js
 const app = getApp()
-// const axios = require('axios');
-const apiKey = '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';
-// const openaiEndpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-// import OpenAI from "openai";
-// const openai = new OpenAI();
+
 Page({
   thinking: false,
   data: {
@@ -39,7 +34,8 @@ Page({
       from: "ai",
       time: "6月15日 16:30"
     }],
-    scrollTop: 0
+    scrollTop: 0,
+    chatRecords: '今天的语文作业是：（1）背诵第一课古诗三首中的《绝句》和《惠崇春江晚景》两首诗；请家长回家后检查孩子的课堂笔记；（2）预习第一课古诗三首中的《三衢道中》，做好生词查阅。'
   },
 
   godetail(e) {
@@ -50,14 +46,18 @@ Page({
     }
   },
   chat(e) {
+    let chatRecords = this.data.chatRecords;
     console.log(e.detail.value);
-    var date = new Date(); //获取当前时间
-    var year = date.getFullYear(); //获取当前年份
-    var month = date.getMonth() + 1; //获取当前月份
-    var day = date.getDate(); //获取当前日期
-    var hour = date.getHours(); //获取当前小时
-    var minute = date.getMinutes(); //获取当前分钟
-    var second = date.getSeconds(); //获取当前秒钟
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var hour = date.getHours();
+    var minute = date.getMinutes(); 
+    var second = date.getSeconds(); 
+    if (minute < 10) {
+      minute = "0" + minute;
+    }
 
     let time = month + '月' + day + '日 ' + hour + ':' + minute;
     let newData = {
@@ -70,7 +70,7 @@ Page({
       dialogs: this.data.dialogs.concat(newData),
       inputValue: '',
       thinking: true,
-      scrollTop: this.data.dialogs.length * 90
+      scrollTop: (this.data.dialogs.length) * 185
     })
     let that = this
     wx.request({
@@ -78,8 +78,8 @@ Page({
       method: 'POST',
       data: {
         grant_type: 'client_credentials',
-        client_id: 'Jro22JhBWD4zPVv3IGoRAEU6',
-        client_secret: 'K1ned6Hf8zapuoOHkGNktUnhP2DcuJlv'
+        client_id: 'client_id',
+        client_secret: 'client_secret'
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -91,23 +91,29 @@ Page({
 
           // 调用 ERNIE-Speed-128K 模型 API
           wx.request({
-            url: 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/ernie-speed-128k?access_token=' + accessToken,
+            url: 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/ernie-3.5-128k?access_token=' + accessToken,
             method: 'POST',
             data: {
               messages: [
                 {
                   role: "user",
-                  content: "你是一个ai助教，你的名字叫小诗，我是王老师。你需要根据以下内容回复我的问题，如果问题的答案不在以下内容中，你就回复不知道，要有礼貌：你好小诗，请将今天的语文作业上传到作业管理中，并将作业消息转发到班级群里。（1）背诵第一课古诗三首中的《绝句》和《惠崇春江晚景》两首诗；请家长回家后检查孩子的课堂笔记；（2）预习第一课古诗三首中的《三衢道中》，做好生词查阅。我的问题是：" + e.detail.value,
+                  content: "提出的问题是：" + e.detail.value,
                 }
               ],
-              temperature: 1.0  // 设置生成文本的随机性
+              temperature: 0.8,
+              top_p: 0.8,
+              penalty_score: 1,
+              disable_search: true, 
+              enable_citation: false,
+              collapsed: true,
+              system: "你是一个ai助教，你的名字叫小诗，我是王老师。以下的内容是班级群里的作业布置和通知记录。你需要根据这些内容回复问题。对于与内容无关的问题就直接礼貌回答不知道，不要说太多，委婉一点。如果直接问某一天的作业，则分别回答语文作业、数学作业和英文作业。" + chatRecords
             },
             header: {
               'Content-Type': 'application/json',
               'Authorization': 'Bearer ' + accessToken
             },
             success: (res) => {
-              console.log('Response:', res.data.result);
+              console.log('Response:', res.data);
               let reply = {
                 type: "text",
                 from: "ai",
@@ -117,7 +123,7 @@ Page({
               that.setData({
                 thinking: false,
                 dialogs: that.data.dialogs.concat(reply),
-                scrollTop: that.data.dialogs.length * 80
+                scrollTop: that.data.dialogs.length * 200
               })
             },
             fail: (err) => {
@@ -133,47 +139,27 @@ Page({
       }
     });
 
-
-    // wx.request({
-    //   url: 'https://api.gptsapi.net/v1/chat/completions',
-    //   method: 'POST',
-    //   header: {
-    //     'Authorization': 'sk-pSha8f9b3bf58fd2ad22dfe3c03dabc8923068affa2zJpzu',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   data: {
-    //     model: 'gpt-4',
-    //     messages: [
-    //       { role: "system", content: "你是一个ai助教，你的名字叫小诗。你需要根据以下内容回复王老师的问题，如果问题的答案不在以下内容中，你就回复不知道，要有礼貌：你好小诗，请将今天的语文作业上传到作业管理中，并将作业消息转发到班级群里。（1）背诵第一课古诗三首中的《绝句》和《惠崇春江晚景》两首诗；请家长回家后检查孩子的课堂笔记；（2）预习第一课古诗三首中的《三衢道中》，做好生词查阅。" },
-    //       {
-    //         role: "user",
-    //         content: e.detail.value,
-    //       },
-    //     ],
-    //   },
-    //   success(res) {
-    //     console.log(res.data);
-    //     let reply = {
-    //       type: "text",
-    //       from: "ai",
-    //       content: res.data.choices[0].message.content,
-    //       time: time
-    //     };
-    //     that.setData({
-    //       dialogs: that.data.dialogs.concat(reply),
-    //       scrollTop: that.data.dialogs.length * 90
-    //     })
-    //   },
-    //   fail(err) {
-    //     console.error('API request failed: ', err);
-    //   }
-    // });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    wx.request({
+      url: 'https://636c-cloud1-5grlqqzee599543a-1316694133.tcb.qcloud.la/records.txt?sign=1d2523078c315eff705cb1e66addf74b&t=1726720116',
+      method: 'GET',
+      success: (res) => {
+        if (res.statusCode === 200) {
+          this.setData({
+            chatRecords: res.data
+          });
+        } else {
+          console.log('文件读取失败', res.statusCode);
+        }
+      },
+      fail: (err) => {
+        console.error('请求失败', err);
+      }
+    });
   },
 
   /**
@@ -188,42 +174,7 @@ Page({
    */
   onShow() {
     this.setData({
-      scrollTop: this.data.dialogs.length * 80
+      scrollTop: this.data.dialogs.length * 185
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
   }
 })

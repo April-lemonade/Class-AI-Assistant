@@ -8,17 +8,17 @@ Page({
     top: [{
       label: '学校公告',
       icon: 'https://img.js.design/assets/img/669f7b6ef7b4dc16d879e24d.png#dc7e8c563bac6ef5fa7878baa797e2c5',
-      width: 90,
-      height: 84
+      width: 80,
+      height: 75
     }, {
       label: '班级公告',
-      icon: 'https://img.js.design/assets/img/669f7388a4202cb4cc4e683e.png#a00fe790de3b6f4c28faabab2c2b09e0', width: 90,
-      height: 84
+      icon: 'https://img.js.design/assets/img/669f7388a4202cb4cc4e683e.png#a00fe790de3b6f4c28faabab2c2b09e0', width: 77,
+      height: 78
     }, {
       label: '课程公告',
       icon: 'https://img.js.design/assets/img/669f7bd1a6d27f945b49d540.png#0fdf345fd64827875b76764c084e5292',
-      width: 93,
-      height: 84
+      width: 83,
+      height: 75
     }],
     nots: [
       {
@@ -49,7 +49,32 @@ Page({
         time: '04月15日 10:00',
         dep: '金凤小学'
       }
-    ]
+    ],
+    noti: [{
+      title: '珠海市生态文明手抄报征集',
+      dep: '助教小诗',
+      date: '10月25日 21:17',
+      see: 560,
+      img:'https://img.js.design/assets/img/669fb210ef17b6a841ea3d70.jpg#e99abd7ec21ddbc232ecef9a9c4f5eeb'
+    },{
+      title: '关于游泳课通知',
+      dep: '王老师',
+      date: '10月24日 21:17',
+      see: 560,
+      img:'https://img.js.design/assets/img/671be28f0537cc86d3489d21.jpg#67b21d38dacdcb96b322dcc9ab01874c'
+    },{
+      title: '语文素养比赛”第二轮学生练习链接通知',
+      dep: '王老师',
+      date: '10月22日 21:17',
+      see: 560,
+      img:'https://img.js.design/assets/img/660d11d81909fc60388a42e8.jpg#922dc7edda4cec65a37f908ca4a60e95'
+    },{
+      title: '关于家长公开课通知',
+      dep: '王老师',
+      date: '10月21日 21:17',
+      see: 560,
+      img:'https://img.js.design/assets/img/65f502320110f631d844c474.jpeg#c4877594c9265bb0745efab86c1beada'
+    }]
   },
 
   godetail() {

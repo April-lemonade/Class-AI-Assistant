@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "t-tabs": "../../miniprogram_npm/tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "../../miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel",
+    "t-icon": "../../miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "t-fab": "../../miniprogram_npm/tdesign-miniprogram/fab/fab",
+    "t-empty": "../../miniprogram_npm/tdesign-miniprogram/empty/empty"
+  },
+  "navigationBarTitleText": "通知公告"
+}

@@ -5,26 +5,26 @@
     <view class="background-block block2"></view>
   </view>
   <view class="content">
-    <t-grid class="cells" column="{{3}}" theme="card" style="border-radius: 40rpx;">
+    <t-grid class="cells" column="{{3}}" theme="card" style="border-radius: 40rpx;margin-bottom: 8%;">
       <t-grid-item wx:for="{{top}}" wx:key="index" image="slot" badge-props="{{ { dot: index==0,color:'var(--td-brand-color)'} }}">
         <image slot="image" style="width: {{item.width}}rpx;height: {{item.height}}rpx;" src="{{item.icon}}" />
-        <view slot="text" style="color:{{index==0?'var(--td-brand-color)':''}}">{{item.label}}</view>
+        <view slot="text" style="color:{{index==0?'#348EE3':'#333333'}};font-size: 34rpx;width: 100%;">{{item.label}}</view>
       </t-grid-item>
     </t-grid>
-    <t-cell-group class="cells" wx:for="{{nots}}" wx:key="index" theme="card" style="margin-top: 4%;border-radius: 55.81rpx;">
+    <t-cell-group class="cells" wx:for="{{nots}}" wx:key="index" theme="card" style="margin-top: 5%;border-radius: 55.81rpx;">
       <t-cell hover align="top" bind:tap="godetail">
-        <view slot="title" style="font-size: 34rpx;color:rgba(52, 142, 227, 1);margin-bottom: 3%;">{{item.title}}</view>
-        <t-badge dot slot="note" wx:if="{{index<2}}" color="var(--td-brand-color)" />
+        <view slot="title" style="font-size: 34rpx;color:{{index<2?'var(--td-brand-color)':'#333333'}};margin-bottom: 3%;font-weight: bold;">{{item.title}}</view>
+        <t-badge dot slot="note" color="{{index<2?'var(--td-brand-color)':'white'}}" />
         <view slot="description">
-          <view style="font-size:30rpx;line-height:35rpx;color: rgba(51, 51, 51, 0.9);margin-bottom: 3%;">
+          <view style="font-size:30rpx;line-height:35rpx;color: rgba(51, 51, 51, 0.9);margin-bottom: 3%;text-align: justify;">
             {{item.des}}
           </view>
           <view style="display: flex;flex-direction: row;font-size: 24rpx;line-height: 20rpx;padding: 3% 0;width: 100%;color: rgba(0, 0, 0, 0.4);">
-            <view style="width: 35%;">创建单位：{{item.dep}}</view>
+            <view style="width: 37%;">创建单位：{{item.dep}}</view>
             <view style="width: 45%;text-align: center;">{{item.time}}</view>
-            <view style="display: flex;flex-direction: row;width: 18%;justify-content: flex-end;">
+            <view style="display: flex;flex-direction: row;width: 18%;justify-content: flex-end;gap:5rpx">
               <t-icon name="browse" />
-              <view>{{item.view}}</view>
+              <view style="align-items: center;text-align: center;display: flex;flex-direction: row;">{{item.view}}</view>
             </view>
           </view>
         </view>

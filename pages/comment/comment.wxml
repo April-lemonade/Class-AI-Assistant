@@ -1,0 +1,25 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+      <t-tab-panel label="本周" value="0" />
+      <t-tab-panel label="上周" value="1" />
+      <t-tab-panel label="本月" value="2" />
+      <t-tab-panel label="全部" value="3" />
+    </t-tabs>
+    <view style="border-radius: 30rpx;background: rgba(255, 255, 255, 1);box-shadow: 0rpx 2rpx 60rpx  rgba(0, 48, 102, 0.12);backdrop-filter: blur(4rpx);margin:5%;padding: 5% 10%;">
+      <view style="display: flex;flex-direction: row;justify-content: space-between;margin-bottom: 15%;font-size: 28rpx;line-height: 40rpx;color: rgba(51, 51, 51, 0.65);">
+        <view>排名</view>
+        <view>姓名</view>
+        <view>红花获得数</view>
+      </view>
+      <t-divider content="暂无排名" />
+    </view>
+    <t-fab icon="add" bind:click="handleClick" />
+  </view>
+</scroll-view>

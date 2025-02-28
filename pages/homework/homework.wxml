@@ -1,0 +1,80 @@
+<scroll-view class="container" scroll-y>
+  <view class="bg">
+    <view class="background-block block1"></view>
+    <view class="background-block block2"></view>
+    <view class="background-block block3"></view>
+    <view class="background-block block4"></view>
+  </view>
+  <view class="content">
+    <t-tabs animation="{{ { duration: 0.6 } }}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" t-class-content="custom-panel">
+      <t-tab-panel label="已发布的作业" value="0" class="tabPanelstyle">
+        <view style="display: flex;flex-direction: column;">
+          <view wx:for="{{homework}}" wx:key="index" class="homeworkContainer">
+            <view class="top">
+              <t-avatar size="85rpx" image="{{item.img}}" />
+              <view style="display: flex;flex-direction: column;justify-content: space-between;height: 85rpx;">
+                <view class="title">{{item.title}} </view>
+                <view style="display: flex;flex-direction: row;justify-content: space-between;">
+                  <view class="subtitle">发布者：{{item.person}}</view>
+                  <view class="subtitle">{{item.date}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="detail">{{item.content}}</view>
+            <view style="border-radius: 0px 0px, 50rpx, 50rpx;background: rgba(97, 179, 255, 0.1);height: 73.75rpx;justify-content: center;display: flex;flex-direction: column;width: 100%;">
+              <view class="btn">
+                <view wx:for="{{btns}}" wx:key="index" style="display: flex;flex-direction: row;width:33%;gap: 10rpx;justify-content: {{index==2?'flex-end':index==1?'center':''}};border-right: {{index!=2?'solid 1rpx rgba(0,0,0,0.25)':''}};">
+                  <t-icon name="{{item.name}}" size="32rpx" />
+                  <view>{{item.text}}</view>
+                </view>
+                <t-divider layout="vertical" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </t-tab-panel>
+      <t-tab-panel label="作业搜集情况" value="1" class="tabPanelstyle">
+        <t-cell-group theme="card" style="margin: 0;box-shadow: 0px 4px 30px  rgba(0, 48, 102, 0.1);border-radius: 49.83rpx;height: 223rpx;">
+          <t-cell hover style="padding: 40rpx;">
+            <view slot="image">
+              <image mode="aspectFill" style="height: 150rpx;width: 144rpx;border-radius: 30rpx;" src="https://img.js.design/assets/img/669fb2a5e6b41f30e1dda1af.jpg#e436e4d032f5502133f180cc0ecce7a6" />
+            </view>
+            <view slot="description">
+              <view class="classinfo" style="margin-left: 5%;">
+                <view style="font-size:30rpx;color:rgba(51, 51, 51, 1);font-weight: 500;">三年级二班</view>
+                <view class="dateweather" style="color:rgba(51, 51, 51, 0.65)">
+                  <view>共40人</view>
+                  <view>当前班级完成率：80%</view>
+                </view>
+                <t-progress stroke-width='17.11rpx' style="width:100%" percentage="80" color="gradient(203.26deg, rgba(29, 245, 198, 1) 0%, rgba(97, 179, 255, 1) 100%);" label="" />
+              </view>
+            </view>
+          </t-cell>
+        </t-cell-group>
+        <view style="border-radius: 50rpx;background: rgba(255, 255, 255, 0.8);box-shadow: 0rpx 4rpx 50rpx  rgba(92, 181, 162, 0.25);backdrop-filter: blur(4rpx);margin-top: 5%;padding: 10% 5%;">
+          <view style="display: flex;flex-direction: row;justify-content: space-between;">
+            <view style="font-size: 34rpx;color: rgba(51, 51, 51, 1);">未完成</view>
+            <view style="border-radius: 30rpx;background: linear-gradient(90deg, rgba(127, 192, 253, 1) 0%, rgba(72, 245, 207, 1) 100%);color: white;padding: 1% 5%;">智能提醒</view>
+          </view>
+          <t-grid class="block" column="{{5}}" style="background-color:transparent;--td-grid-item-bg-color:transparent">
+            <t-grid-item style="--td-grid-item-image-middle-width:150rpx;--td-grid-item-image-middle-height:150rpx;" wx:for="{{stu1}}" wx:key="index" text="{{item.name}}" image="slot" data-name="{{item.name}}" data-img="{{item.img}}" bind:tap="godetail">
+              <t-avatar class="avatar-example" size="80rpx" image="{{item.img}}" />
+
+            </t-grid-item>
+          </t-grid>
+          <t-divider />
+          <view style="font-size: 34rpx;color: rgba(52, 142, 227, 1);">已完成</view>
+          <t-grid class="block" column="{{5}}" style="background-color:transparent;--td-grid-item-bg-color:transparent">
+            <t-grid-item style="--td-grid-item-image-middle-width:150rpx;--td-grid-item-image-middle-height:150rpx;" wx:for="{{stu2}}" wx:key="index" text="{{item.name}}" image="slot" data-name="{{item.name}}" data-img="{{item.img}}" bind:tap="godetail">
+              <t-avatar class="avatar-example" size="80rpx" image="{{item.img}}" />
+            </t-grid-item>
+          </t-grid>
+        </view>
+      </t-tab-panel>
+    </t-tabs>
+    <view wx:if="{{current==0}}">
+      <t-fab icon="add" bind:click="handleClick" />
+    </view>
+
+  </view>
+</scroll-view>

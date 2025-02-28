@@ -3,7 +3,8 @@
   position: relative;
   height: calc(100vh - 66rpx);
   min-height: calc(100vh - 66rpx);
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
   /* 确保子元素不会超出容器 */
 }
 
@@ -68,7 +69,7 @@
   left: 70rpx;
   top: 485rpx;
   width: 610rpx;
-  height: 168rpx;
+  height: 190rpx;
   opacity: 1;
   border-radius: 42rpx;
   background: rgba(0, 0, 0, 0.08);

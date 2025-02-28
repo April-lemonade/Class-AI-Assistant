@@ -68,8 +68,8 @@
 }
 
 .divider {
-  height: 1rpx;
-  background-color: rgba(245, 245, 245, 1);
+  height: 1.5rpx;
+  background-color: rgba(51, 51, 51, 0.4);
   /* 灰色分割线 */
   margin: 10px 0;
 }
@@ -94,5 +94,4 @@
   line-height: 40rpx;
   color: rgba(0, 0, 0, 0.4);
   margin-top: 3%;
-  box-shadow: 0rpx 6rpx 16rpx rgba(0, 0, 0, 0.06);
 }
