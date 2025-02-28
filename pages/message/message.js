@@ -145,7 +145,7 @@ Page({
    */
   onLoad(options) {
     wx.request({
-      url: 'https://636c-cloud1-5grlqqzee599543a-1316694133.tcb.qcloud.la/records.txt?sign=1d2523078c315eff705cb1e66addf74b&t=1726720116',
+      url: 'https://xxxxxxxx/records.txt?sign=xxxxxxxxx',
       method: 'GET',
       success: (res) => {
         if (res.statusCode === 200) {
